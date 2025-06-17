@@ -9,7 +9,7 @@ namespace Game
         private LevelLoader _levelLoader;
 
         [Inject]
-        public void Initialize(LevelLoader levelLoader)
+        public void Construct(LevelLoader levelLoader)
         {
             _levelLoader = levelLoader;
         }

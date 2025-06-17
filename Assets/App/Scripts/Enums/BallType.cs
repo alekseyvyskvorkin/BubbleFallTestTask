@@ -9,4 +9,9 @@ namespace Game.Enums
         Blue,
         Red
     }
+
+    public enum BallState
+    {
+
+    }
 }

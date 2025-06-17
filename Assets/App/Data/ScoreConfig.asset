@@ -9,6 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cacc6c3b2722a4479fed7976dd45556, type: 3}
-  m_Name: MainConfig
+  m_Script: {fileID: 11500000, guid: cbd8c82e36f11854f96f3029914a6d16, type: 3}
+  m_Name: ScoreConfig
   m_EditorClassIdentifier: 
+  <ScorePerBall>k__BackingField: 10

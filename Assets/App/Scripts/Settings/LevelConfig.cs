@@ -15,9 +15,8 @@ namespace Game.Settings
     [System.Serializable]
     public class Level
     {
-        [field: SerializeField] public LevelGrid[] LevelGrid { get; private set; }       
+        [field: SerializeField] public LevelGrid[] LevelGrid { get; private set; }
+        [field: SerializeField] public float StartSpawnPositionZ { get; private set; } = 10f;
     }
-
-    
 }
 

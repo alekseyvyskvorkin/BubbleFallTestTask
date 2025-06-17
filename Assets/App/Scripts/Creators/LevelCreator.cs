@@ -40,7 +40,7 @@ namespace Game.Creators
                 for (int x = 0; x < spawnCount; x++)
                 {
                     var ball = Instantiate(_creatableConfig.Ball, spawnPosition, Quaternion.identity, transform);
-                    ball.Initialize();
+                    ball.Construct();
                     ball.SetRandomType();
                     spawnPosition = new Vector3(x + offsetX + 1, 0, i * _offsetZ);
                 }

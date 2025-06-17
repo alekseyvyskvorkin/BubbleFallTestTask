@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using Game.Interfaces;
+using Zenject;
 
 namespace Game
 {
@@ -9,6 +10,16 @@ namespace Game
     {
         private Dictionary<Type, List<IExecutable>> _executables = new Dictionary<Type, List<IExecutable>>();
         private Dictionary<Type, List<IExecutable>> _lateUpdateExecutables = new Dictionary<Type, List<IExecutable>>();
+
+        [Inject]
+        public void Construct(GameStateService gameStateService)
+        {
+            gameStateService.OnStartPlay += Enable;
+            gameStateService.OnFailGame += Disable;
+        }
+
+        private void Enable() => enabled = true;
+        private void Disable() => enabled = false;
 
         private void Update()
         {

@@ -16,3 +16,5 @@ MonoBehaviour:
     type: 2}
   <CreatableConfig>k__BackingField: {fileID: 11400000, guid: bd6451ff10e181f4288259f0e7d92d79,
     type: 2}
+  <ScoreConfig>k__BackingField: {fileID: 11400000, guid: 22a7d560f2b986c42b9cf316b826fc46,
+    type: 2}

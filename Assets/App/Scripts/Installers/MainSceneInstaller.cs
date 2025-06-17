@@ -3,6 +3,7 @@ using Zenject;
 using UnityEngine;
 using Game.Creators;
 using Game.Inputs;
+using Game.Data;
 
 namespace Game.Installers
 {
@@ -13,6 +14,7 @@ namespace Game.Installers
         [field: SerializeField] private ParentsHolder _parentHolder { get; set; }
         [field: SerializeField] private InputHandler _input { get; set; }
         [field: SerializeField] private ExecuteHandler _executeHandler { get; set; }
+        [field: SerializeField] private Canvas _mainCanvas { get; set; }
 
 
         public override void InstallBindings()
@@ -22,8 +24,11 @@ namespace Game.Installers
             Container.Bind<ParentsHolder>().FromInstance(_parentHolder).AsSingle().NonLazy();
             Container.Bind<InputHandler>().FromInstance(_input).AsSingle().NonLazy();
             Container.Bind<ExecuteHandler>().FromInstance(_executeHandler).AsSingle().NonLazy();
+            Container.Bind<Canvas>().FromInstance(_mainCanvas).AsSingle().NonLazy();
 
             Container.Bind<Factory>().AsSingle().NonLazy();
+            Container.Bind<GameData>().AsSingle().NonLazy();
+            Container.Bind<GameStateService>().AsSingle().NonLazy();
         }
     }
 }

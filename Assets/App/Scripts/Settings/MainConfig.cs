@@ -7,6 +7,7 @@ namespace Game.Settings
     {
         [field: SerializeField] public LevelConfig LevelConfig {  get; private set; }
         [field: SerializeField] public CreatableConfig CreatableConfig { get; private set; }
+        [field: SerializeField] public ScoreConfig ScoreConfig { get; private set; }
     }
 }
 
